@@ -8,12 +8,27 @@ public class GameManager : MonoBehaviour
     public GameObject car;
     public GameObject flag;
     public Text ui;
+    public GameObject restartButton;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        restartButton.SetActive(false);
+        // Button restarter = restartButton.GetComponent<Button>();
+        // restarter.onClick.AddListener(clicked);
+    }
+    public void clicked()
+    {
+        Debug.Log("´­·È´Ù!");
+        car.GetComponent<CarController>().charge = false;
+        car.GetComponent<CarController>().moved = false;
+        car.GetComponent<CarController>().start = 0;
+        car.GetComponent<CarController>().end = 0;
+        car.GetComponent<CarController>().speed = 0;
+        car.GetComponent<CarController>().isMoved = false;
+        car.transform.position = new Vector3(-7, -3.7f, 0);
+        restartButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,6 +42,10 @@ public class GameManager : MonoBehaviour
         else
         {
             ui.text = "À¸¾Ç";
+        }
+        if (car.GetComponent<CarController>().isMoved)
+        {
+            restartButton.SetActive(true);
         }
     }
 }

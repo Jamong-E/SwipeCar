@@ -419,6 +419,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 549fd5c2820571a45be34fc703d89008, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charge: 0
+  moved: 0
+  start: 0
+  end: 0
+  speed: 0
+  isMoved: 0
 --- !u!1 &396570310
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +712,7 @@ MonoBehaviour:
   car: {fileID: 67583358}
   flag: {fileID: 1704860841}
   ui: {fileID: 396570312}
+  restartButton: {fileID: 1332007755}
 --- !u!4 &904168086
 Transform:
   m_ObjectHideFlags: 0
@@ -803,7 +810,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1332007758}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 904168085}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: clicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1332007758
 MonoBehaviour:
   m_ObjectHideFlags: 0
