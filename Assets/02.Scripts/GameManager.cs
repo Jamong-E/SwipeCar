@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class GameManager : MonoBehaviour
     }
     public void clicked()
     {
-        Debug.Log("´­·È´Ù!");
+        /*Debug.Log("´­·È´Ù!");
         car.GetComponent<CarController>().charge = false;
         car.GetComponent<CarController>().moved = false;
         car.GetComponent<CarController>().start = 0;
@@ -28,7 +29,8 @@ public class GameManager : MonoBehaviour
         car.GetComponent<CarController>().speed = 0;
         car.GetComponent<CarController>().isMoved = false;
         car.transform.position = new Vector3(-7, -3.7f, 0);
-        restartButton.SetActive(false);
+        restartButton.SetActive(false);*/
+        SceneManager.LoadScene(0);
     }
 
     // Update is called once per frame
